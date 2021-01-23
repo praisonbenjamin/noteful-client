@@ -1,0 +1,13 @@
+.NotefulApp{
+    display: flex;
+}
+
+.flex-one{
+    flex: 1;
+    background-color: lightgrey;
+}
+
+.flex-three{
+    flex: 3;
+    background-color: yellowgreen;
+}
