@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import NotefulContext from '../NotefulContext'
 import './SideBar.css';
+import { countNotesForFolder } from '../NoteCounter/NoteCounter'
 // import Folder from '../Folder/Folder'
 
 class SideBar extends React.Component {
@@ -14,7 +15,7 @@ class SideBar extends React.Component {
             return (
                 <div className='folder' key={folder.id}>
                     <Link
-                        to={`/folder/${folder.id}`}>{folder.folder_name}</Link>
+                        to={`/folder/${folder.id}`}>{folder.folder_name} ({countNotesForFolder(this.context.notes, folder.id)})</Link>
                 </div>
             )
         })
